@@ -1,0 +1,24 @@
+name: maven spring boot ci
+
+on:
+ push:
+   branches: ["main"]
+jobs:
+  build:
+     runs-on: "ubuntu-latest"
+
+     steps:
+        - name: setup checkout
+          uses: actions/checkout@v3
+        - name: step 2:setup jdk
+          uses: actions/setup-java@v4
+          with:
+           java-version: '17'
+           distribution: 'zulu'
+        - name: package application
+          run: mvn -B package --file pom.xml
+        - name: locate jar
+          run: |
+               cd target
+               ls -a
+ 
