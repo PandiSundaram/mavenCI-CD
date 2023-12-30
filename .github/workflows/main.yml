@@ -16,7 +16,10 @@ jobs:
            java-version: '17'
            distribution: 'zulu'
         - name: package application
-          run: mvn -B package --file pom.xml
+          run: |
+              mvn -B package --file pom.xml
+              mkdir staging && cp target/*.jar staging
+          
         - name: locate jar
           run: |
                cd target
