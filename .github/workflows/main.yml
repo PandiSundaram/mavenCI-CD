@@ -21,4 +21,9 @@ jobs:
           run: |
                cd target
                ls -a
+        - name: upload artifact
+          uses: actions/upload-artifact@v3
+          with:
+           name: myjar
+           path: staging
  
