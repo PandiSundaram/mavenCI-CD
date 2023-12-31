@@ -31,7 +31,6 @@ jobs:
            path: staging
         - name: test reports
           uses: phoenix-actions/test-reporting@v12
-          if: always()
           with:
            name: Maven Tests
            path: target/surefire-reports/*.xml
