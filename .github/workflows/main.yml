@@ -29,4 +29,11 @@ jobs:
           with:
            name: myjar
            path: staging
- 
+        - name: test reports
+          uses: hoenix-actions/test-reporting@v8
+          if: always()
+          with:
+           name: Maven Tests
+           path: target/surefire-reports/*.xml
+           reporter: java-junit
+           fail-on-error: true
