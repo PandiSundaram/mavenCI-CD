@@ -40,9 +40,10 @@ jobs:
           with:
             host: https://e50e-117-205-114-168.ngrok-free.app
             login: sqp_14d34883bc1a3f6b76af0db5a7f8fd7400a52b0d
-        - name: Build and analyze
-          env:
-           GITHUB_TOKEN: ${{ secrets. GITHUB_TOKEN }}   # Needed to get PR information, if any
-           SONAR_TOKEN: sqa_2c2d8f311d43a5bd8dc2201f859fb8a828fc1ddd
-           SONAR_HOST_URL: https://8ac5-59-89-198-61.ngrok-free.app/
-          run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+            projectKey: maventestproject
+        # - name: Build and analyze
+        #   env:
+        #    GITHUB_TOKEN: ${{ secrets. GITHUB_TOKEN }}   # Needed to get PR information, if any
+        #    SONAR_TOKEN: sqa_2c2d8f311d43a5bd8dc2201f859fb8a828fc1ddd
+        #    SONAR_HOST_URL: https://8ac5-59-89-198-61.ngrok-free.app/
+        #   run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
