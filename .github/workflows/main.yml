@@ -38,9 +38,8 @@ jobs:
         - name: run sonar
           env:
            # GITHUB_TOKEN: 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  # Needed to get PR information, if any
-           SONAR_TOKEN: sqp_14d34883bc1a3f6b76af0db5a7f8fd7400a52b0d
-           SONAR_HOST_URL: https://e50e-117-205-114-168.ngrok-free.app/
-          
-           run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+            SONAR_TOKEN: sqp_14d34883bc1a3f6b76af0db5a7f8fd7400a52b0d
+            SONAR_HOST_URL: https://e50e-117-205-114-168.ngrok-free.app/
+          run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
          
       
