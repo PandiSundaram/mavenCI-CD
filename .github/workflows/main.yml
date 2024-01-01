@@ -38,8 +38,8 @@ jobs:
         - name: sonar
           uses: sonarsource/sonarqube-scan-action@master
           with:
-            SONAR_HOST_URL: https://e50e-117-205-114-168.ngrok-free.app
-            SONAR_TOKEN: sqp_14d34883bc1a3f6b76af0db5a7f8fd7400a52b0d
+            SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+            SONAR_TOKEN: ${{SONAR_TOKEN}}
         # - name: Build and analyze
         #   env:
         #    GITHUB_TOKEN: ${{ secrets. GITHUB_TOKEN }}   # Needed to get PR information, if any
