@@ -36,7 +36,7 @@ jobs:
            path: target/surefire-reports/*.xml
            reporter: java-junit
         - name: sonar
-          uses: kitabisa/sonarqube-action@v1.2.0
+          uses: sonarsource/sonarqube-scan-action@master
           with:
             host: https://e50e-117-205-114-168.ngrok-free.app
             login: sqp_14d34883bc1a3f6b76af0db5a7f8fd7400a52b0d
