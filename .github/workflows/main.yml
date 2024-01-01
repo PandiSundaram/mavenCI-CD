@@ -40,6 +40,7 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
             SONAR_TOKEN: sqp_14d34883bc1a3f6b76af0db5a7f8fd7400a52b0d
             SONAR_HOST_URL: https://e50e-117-205-114-168.ngrok-free.app/
+            SONAR_PROJECTKEY: "maventestproject"
           run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
          
       
