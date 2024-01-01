@@ -39,10 +39,5 @@ jobs:
           uses: sonarsource/sonarqube-scan-action@master
           with:
             SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-            SONAR_TOKEN: ${{SONAR_TOKEN}}
-        # - name: Build and analyze
-        #   env:
-        #    GITHUB_TOKEN: ${{ secrets. GITHUB_TOKEN }}   # Needed to get PR information, if any
-        #    SONAR_TOKEN: sqa_2c2d8f311d43a5bd8dc2201f859fb8a828fc1ddd
-        #    SONAR_HOST_URL: https://8ac5-59-89-198-61.ngrok-free.app/
-        #   run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+            SONAR_TOKEN: ${{ SONAR_TOKEN }}
+    
